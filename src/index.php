@@ -17,6 +17,10 @@
 </head>
 <body>
     <font size="7" color="#ff8c00" face="丸ゴシック">観光名所</font><hr>
+    <form action="search.php" method="post">
+        <input text-align:center type="text" name="key" placeholder="キーワード検索" style=" width:400px;height:20px;font-size:1.3em;"><br>
+        <button text-align:center type="submit">検索</button>
+    </form>
     
 </body>
 </html>
