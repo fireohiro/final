@@ -1,0 +1,22 @@
+table {
+    width: 80%;
+    margin: 0 auto; 
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px; 
+    text-align: left;
+}
+.tourist-attraction {
+    font-size: 2em;
+    color: #ff8c00;
+    font-family: '丸ゴシック', sans-serif;
+}
+
+.separator {
+    border: 1px solid #000; 
+}
+.right-align {
+    text-align: right;
+}
