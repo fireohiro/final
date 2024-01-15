@@ -37,7 +37,9 @@
     $sql=$pdo->query('select * from spot');
     echo '<div class="slider">';
     foreach($sql as $row){
-        echo '<img src="img/',$row['viewgazou'],'" width="1400" height="300" alt="観光地画像">';
+        if(isset($row['viewgazou'])){
+            echo '<img src="img/',$row['viewgazou'],'" width="1400" height="300" alt="観光地画像">';
+        }
     }
     echo '</div>';
     ?>
@@ -46,7 +48,7 @@
     <?php
         echo '<button class="right-align" onclick="location.href=\'addspot1.php\'">観光地登録</button>';
         echo '<table>';
-        echo '<tr><th>観光名</th><th>所在地域</th><th></th><th></th></tr>';
+        echo '<tr><th>観光名</th><th>カテゴリー</th><th>所在地域</th><th></th><th></th></tr>';
         $spl=$pdo->query('select * from spot');
         foreach($spl as $saw){
             $ssl=$pdo->prepare('select * from area where a_id = ?');
@@ -54,8 +56,9 @@
             foreach($ssl as $waw){
                 echo '<tr>';
                 echo '<td>',$saw['s_mei'],'</td>';
+                echo '<td>',$saw['category'],'</td>';
                 echo '<td>',$waw['a_mei'],'</td>';
-                echo '<td><button onclick="location.href=\'update.php?id=' . $saw['s_id'] . '\'">更新</button></td>';
+                echo '<td><button onclick="location.href=\'update1.php?id=' . $saw['s_id'] . '\'">更新</button></td>';
                 echo '<td><button onclick="location.href=\'delete1.php?id=' . $saw['s_id'] . '\'">削除</button></td>';
                 echo '</tr>';
             }
