@@ -48,8 +48,25 @@
     <?php
         echo '<button class="right-align" onclick="location.href=\'addspot1.php\'">観光地登録</button>';
         echo '<table>';
-        echo '<tr><th>観光名</th><th>カテゴリー</th><th>所在地域</th><th></th><th></th></tr>';
-        $spl=$pdo->query('select * from spot');
+        echo '<tr><th>観光名</th>';
+        echo '<form method="POST">';
+        echo '<th>';
+        echo '<button type="submit">カテゴリー</button>　';
+        echo '<select name="cate">';
+        echo '<option value="0">全て</option>';
+        $owe=$pdo->query('select distinct category from spot');
+        foreach($owe as $eie){
+            echo '<option value="',$eie['category'],'">',$eie['category'],'</option>';
+        }
+        echo '</th>';
+        echo '</form>';
+        echo '<th>所在地域</th><th></th><th></th></tr>';
+        if(!(isset($_POST['cate'])) || $_POST['cate'] == 0){
+            $spl=$pdo->query('select * from spot');
+        }else{
+            $spl=$pdo->prepare('select * from spot where category = ?');
+            $spl->execute([$_POST['cate']]);
+        }
         foreach($spl as $saw){
             $ssl=$pdo->prepare('select * from area where a_id = ?');
             $ssl->execute([$saw['a_id']]);

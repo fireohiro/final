@@ -39,7 +39,7 @@
                 echo '</select>';
             ?><br><br>
         <button type="submit">追加する</button>
-        <button onclick="location.href=\'index.php\'">キャンセル</button>
+        <button onclick="location.href='./index.php'">キャンセル</button>
     </form>
 </body>
 </html>

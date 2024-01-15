@@ -42,7 +42,7 @@
     <form action="delete2.php" method="POST">
         <input type="hidden" name="s_id"  value="<?= $_GET['id'] ?>">
         <button type="submit">削除する</button>
+        <button onclick="location.href='./index.php'">キャンセル</button>
     </form>
-    <span><button onclick="location.href=\'index.php\'">キャンセル</button></span>
 </body>
 </html>

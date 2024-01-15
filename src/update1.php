@@ -46,6 +46,6 @@
         echo '<button type="submit">確定</button>';
         echo '</form>';
     ?>
-    <span><button onclick="location.href=\'index.php\'">キャンセル</button></span>
+    <button onclick="location.href='./index.php'">キャンセル</button>
 </body>
 </html>
