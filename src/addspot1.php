@@ -16,7 +16,7 @@
 </head>
 <body>
     <h1>新規登録</h1><hr>
-    <p>追加する情報を追加してください</p>
+    <p style="background-color: orange; text-align: center; color: white;">追加する情報を追加してください</p>
     <form action="addspot2.php" method="POST" enctype="multipart/form-data">
         <dl>
             <dt>観光地名称　　（必須）</dt>
