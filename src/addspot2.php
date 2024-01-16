@@ -38,6 +38,6 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
     }
     echo '</table>';
 ?>
-    <button onclick="location.href='index.php'">トップページに戻る</button>
+    <button style="text-align: center; float:right;" onclick="location.href='index.php'">トップページに戻る</button>
 </body>
 </html>

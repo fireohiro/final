@@ -43,9 +43,9 @@
         }
         
         echo '<input type="hidden" name="s_id"  value="', $_GET['id'], '">';
-        echo '<button type="submit">確定</button>';
+        echo '<button style="text-align: center;padding-right: 15px; float:right;" type="submit">確定</button>';
         echo '</form>';
     ?>
-    <button onclick="location.href='./index.php'">キャンセル</button>
+    <button style="text-align: center padding-right: 15px; float:right;" onclick="location.href='./index.php'">キャンセル</button>
 </body>
 </html>

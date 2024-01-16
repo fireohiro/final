@@ -38,8 +38,8 @@
                 }
                 echo '</select>';
             ?><br><br>
-        <button type="submit">追加する</button>
-        <button onclick="location.href='./index.php'">キャンセル</button>
+        <button style="padding-right: 15px;text-align: center; float:right;" onclick="location.href='./index.php'">キャンセル</button>
+        <button style="padding-right: 15px;text-align: center; float:right;" type="submit">追加する</button>
     </form>
 </body>
 </html>
