@@ -31,7 +31,7 @@
 </head>
 <body>
 <div class="tourist-attraction">観光名所<span><button style="text-align: center; float:right;" onclick="location.href='addspot1.php'">観光地登録</button></span></div>
-<p style="background-color: orange; text-align: center; color: white;">観光スポット探し</p>
+<p style="background-color: orange; text-align: center;padding-right: 15px; color: white;">観光スポット探し</p>
     <?php
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->query('select * from spot');
