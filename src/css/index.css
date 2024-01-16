@@ -1,3 +1,9 @@
+.hea {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px; /* 必要に応じて余白を設定 */
+}
 table {
     width: 80%;
     margin: 0 auto; 

@@ -31,7 +31,7 @@
 </head>
 <body>
 <div class="tourist-attraction">観光名所</div>
-<hr class="separator">
+<div class="hea">有名な場所からニッチな場所まで</div>
     <?php
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->query('select * from spot');
@@ -43,7 +43,7 @@
     }
     echo '</div>';
     ?>
-    <hr>
+    <hr class="separator">
     <h4>[観光地一覧]</h4>
     <?php
         echo '<button class="right-align" onclick="location.href=\'addspot1.php\'">観光地登録</button>';
