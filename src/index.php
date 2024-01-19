@@ -30,27 +30,28 @@
 
 </head>
 <body>
-<div class="tourist-attraction">観光名所<span><button style="text-align: center; float:right;" onclick="location.href='addspot1.php'">観光地登録</button></span></div>
+<div class="tourist-attraction">観光名所</div>
 <p style="background-color: orange; text-align: center;padding-right: 15px; color: white;">観光スポット探し</p>
     <?php
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->query('select * from spot');
     echo '<div class="slider">';
     foreach($sql as $row){
-        if(isset($row['viewgazou'])){
+        if($row['viewgazou'] != '' && isset($row['viewgazou'])){
             echo '<img src="img/',$row['viewgazou'],'" width="1400" height="300" alt="観光地画像">';
         }
     }
     echo '</div>';
+    echo '<hr class="separator">';
+    echo '<br><button style="text-align: center; float:right;" onclick="location.href=\'addspot1.php\'">観光地登録</button>';
     ?>
-    <hr class="separator">
     <h4>[観光地一覧]</h4>
     <?php
         echo '<table>';
         echo '<tr><th>観光名</th>';
         echo '<form method="POST">';
         echo '<th>';
-        echo '<button type="submit">カテゴリー</button>　';
+        echo '<button type="submit">カテゴリー（検索ボタン）</button>　';
         echo '<select name="cate">';
         echo '<option value="0">全て</option>';
         $owe=$pdo->query('select distinct category from spot');

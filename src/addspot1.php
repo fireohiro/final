@@ -15,8 +15,8 @@
     <title>新規登録画面</title>
 </head>
 <body>
-    <h1>新規登録</h1><hr>
-    <p style="background-color: orange; text-align: center; color: white;">追加する情報を追加してください</p>
+    <h1>新規登録</h1>
+    <p style="background-color: orange; text-align: center; color: white;">追加する情報を追加してください(?)</p>
     <form action="addspot2.php" method="POST" enctype="multipart/form-data">
         <dl>
             <dt>観光地名称　　（必須）</dt>
@@ -38,8 +38,7 @@
                 }
                 echo '</select>';
             ?><br><br>
-        <button style="text-align: center; float:right;" onclick="location.href='./index.php'">キャンセル</button>
         <button style="text-align: center; float:right;" type="submit">追加する</button>
-    </form>
+    </form><span><button style="text-align: center; float:right;" onclick="location.href='./index.php'">キャンセル</button></span>
 </body>
 </html>
